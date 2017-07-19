@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC546CAF-93C6-4D7E-B7B9-43D9E16F755E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_2_OpenClosed</RootNamespace>
+    <AssemblyName>2-OpenClosed</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoreLinq, Version=2.6.20831.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.2.6.0\lib\net40\MoreLinq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\Service\Configuration\AutoIwtSettings.cs" />
+    <Compile Include="Common\Service\Configuration\ConfigSettingServiceListener.cs" />
+    <Compile Include="Common\Service\Configuration\ConfigSettingsService.cs" />
+    <Compile Include="Common\Service\Configuration\ConfigTypeConverter.cs" />
+    <Compile Include="Common\Service\Configuration\Department.cs" />
+    <Compile Include="Common\Service\Configuration\DepartmentListTypeConverter.cs" />
+    <Compile Include="Common\Service\Configuration\DepartmentParser.cs" />
+    <Compile Include="Common\Service\Configuration\GenericListTypeConverter.cs" />
+    <Compile Include="Common\Service\Configuration\ISetting.cs" />
+    <Compile Include="Common\Service\Configuration\Supplier.cs" />
+    <Compile Include="Common\Service\Configuration\SupplierListTypeConverter.cs" />
+    <Compile Include="Common\Service\Configuration\SupplierParser.cs" />
+    <Compile Include="Common\Service\Configuration\UnitCap.cs" />
+    <Compile Include="Common\Service\Configuration\UnitCapListTypeConverter.cs" />
+    <Compile Include="Common\Service\Configuration\UnitCapParser.cs" />
+    <Compile Include="Common\Utilities\DateTimeService.cs" />
+    <Compile Include="Common\Utilities\IDateTimeService.cs" />
+    <Compile Include="DataAccess\CommandAndQueryExecutor.cs" />
+    <Compile Include="DataAccess\Command\MarkMdaAsProcessedCommand.cs" />
+    <Compile Include="DataAccess\Command\SetConfigSetting.cs" />
+    <Compile Include="DataAccess\Command\UpdateMdaBookedDate.cs" />
+    <Compile Include="DataAccess\Command\UpdateProcessedMdaItems.cs" />
+    <Compile Include="DataAccess\DbConnection.cs" />
+    <Compile Include="DataAccess\DbSettings.cs" />
+    <Compile Include="DataAccess\DTO\MerretMDADTO.cs" />
+    <Compile Include="DataAccess\DTO\MerretMDAItemDTO.cs" />
+    <Compile Include="DataAccess\DTO\ScheduledMDAListDTO.cs" />
+    <Compile Include="DataAccess\Queries\RetrieveConfigSetting.cs" />
+    <Compile Include="DataAccess\Queries\RetrieveExternalIdToSkuMap.cs" />
+    <Compile Include="DataAccess\Queries\RetrieveMerretMDAItemsList.cs" />
+    <Compile Include="DataAccess\Queries\RetrieveMerretMDAList.cs" />
+    <Compile Include="DataAccess\Queries\RetrieveScheduledMDAList.cs" />
+    <Compile Include="Domain\MDA\IEvent.cs" />
+    <Compile Include="Domain\MDA\MDA.cs" />
+    <Compile Include="Domain\MDA\MDABookedDateEvent.cs" />
+    <Compile Include="Domain\MDA\MDAItem.cs" />
+    <Compile Include="Domain\MDA\MDAItemProcessedEvent.cs" />
+    <Compile Include="Domain\MDA\MDAItemProcessingInformation.cs" />
+    <Compile Include="Domain\MDA\MDAProcessedEvent.cs" />
+    <Compile Include="MDAService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
