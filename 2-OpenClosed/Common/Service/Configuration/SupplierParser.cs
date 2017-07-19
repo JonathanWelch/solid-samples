@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using _2_OpenClosed.Common.Service.Configuration;
 
-namespace Asos.Inventory.Stock.Iwt.Common.Service.Configuration
+namespace _2_OpenClosed.Common.Service.Configuration
 {
     public interface ISupplierParser
     {

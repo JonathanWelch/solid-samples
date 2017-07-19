@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using Asos.Inventory.Stock.Iwt.Common.Service.Configuration;
 using Newtonsoft.Json;
 
 namespace _2_OpenClosed.Common.Service.Configuration
