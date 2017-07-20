@@ -17,4 +17,7 @@ The ListerHillsStockCheck class has the violation.
 The method ExecuteJob(IJobExecutionContext context) uses the static DateTime.UtcNow property.
 
 
+## 5.1-DependencyInversion
+ListerHillsStockFileProcessor class has the violation
+The method Process(FileInfo inputFile) news up a CsvFileReader.  Could mention the CommandAndQueryExecutor which also news up a query class, which you cant pass in.
  
