@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1-OpenClosed", "2.1-OpenC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.0-DependencyInversion", "5.0-DependencyInversion\5.0-DependencyInversion.csproj", "{E2A21DD8-3909-4B27-B32A-93D06C63EFB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1-DependencyInversion", "5.1-DependencyInversion\5.1-DependencyInversion.csproj", "{25F7E742-5BBB-4704-8474-EEF3DFCAADC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E2A21DD8-3909-4B27-B32A-93D06C63EFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2A21DD8-3909-4B27-B32A-93D06C63EFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2A21DD8-3909-4B27-B32A-93D06C63EFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F7E742-5BBB-4704-8474-EEF3DFCAADC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F7E742-5BBB-4704-8474-EEF3DFCAADC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F7E742-5BBB-4704-8474-EEF3DFCAADC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F7E742-5BBB-4704-8474-EEF3DFCAADC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
